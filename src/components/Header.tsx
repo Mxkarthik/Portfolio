@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 /**
  * Node Modules
  */
-import { SparkleIcon } from "lucide-react";
+import { SparkleIcon , MailIcon , GithubIcon } from "lucide-react";
 
 /**
  * Components
@@ -34,7 +34,22 @@ export const Header = () => {
             </motion.div>
 
             <motion.div className="flex gap-4" initial={{x:20 , opacity : 0}} animate={{x:0 , opacity: 1}}>
-                <Button/>
+                <Button>
+                    <MailIcon/>
+                    Let's Connect
+                </Button>
+
+                <div className="flex gap-2">
+                    <Button 
+                    variant="secondary" 
+                    size="icon"
+                    asChild
+                    >
+                        <a href="https://github.com/Mxkarthik" target="_blank" aria-label="Karthik's GitHub">
+                            <GithubIcon/>
+                        </a>
+                    </Button>
+                </div>
             </motion.div>
         </header>
     );
